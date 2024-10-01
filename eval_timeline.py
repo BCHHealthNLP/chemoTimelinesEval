@@ -633,10 +633,10 @@ if __name__ == "__main__":
     )
 
     print("Official Score: Arithmetic mean of two types of Macro F1, type A and B, " + \
-          "in 'relaxed to month' setting will be used for the leaderboard. ")
-    if not (args.strict) and args.relaxed_to == "month":
+          "in 'strict' setting will be used for the leaderboard. ")
+    if args.strict:
         print("Official Score: ", (type_a_macro_f1 + type_b_macro_f1) / 2)
     else:
-        print("To see the official score, please run without --strict flag, and set 'relaxed to month' setting by --relaxed_to=month ")
+        print("To see the official score, please run with the --strict flag")
 
     print("Evaluation completed!")
